@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <title>API Weather</title>
+  </head>
+  <body>
+	<div class="pantalla-carga">
+		<div class="loader"></div>
+	</div>
+		<nav>
+			<div class="navegador">
+				<h1 class="titulo-provincia">El tiempo en </h1>
+					<div class="contenedor-derecha">
+						<div id="contenedor-error">
+							<p class="mensaje-error"></p>
+							<p class="barra-carga"></p>
+						</div>
+						<input type="search" id="input-buscar" autocomplete="off">
+						<button id="btn-buscar">Buscar</button>
+						<div id="resultado-busqueda"></div>
+					</div>
+			</div>
+		</nav>
+    <div class="contenedor-general">
+      <div class="contenedor-barras">
+        <div class=" fila-hoy">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info info-hoy">
+							<div class="contenedor-fijo-dibujo cnt-dibu-hoy">
+							</div>
+						<div class="contenedor-info-temperatura cont-temp-hoy">
+							<p class="temperatura-real temp-hoy"><span class="simbolo-celsius">ºC</span></p>
+						</div>
+						<div class="valores-varios valores-hoy">
+							<div class="cont-valores">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max svg-imagen"><span class="temperatura-max bold"> Cº </span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min svg-imagen"><span class="temperatura-min bold"> Cº </span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion svg-imagen"> <span class="valor-precipitacion bold">% </span><br>
+								<img src="assets/img/wind.svg" alt="" class="img-viento svg-imagen"><span class="valor-viento bold"> km/h </span><br>
+							</div>
+							<div class="cielo-descripcion">
+								<p class="descripcion-cielo">Cielo: </p>
+								<p ></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fila ">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+						
+							<div class="contenedor-fijo-dibujo">
+							</div>
+						
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+        <div class="fila ">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+						
+							<div class="contenedor-fijo-dibujo">
+							</div>
+						
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+        <div class="fila ">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+						
+							<div class="contenedor-fijo-dibujo">
+							</div>
+						
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+        <div class="fila ">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+						
+							<div class="contenedor-fijo-dibujo">
+							</div>
+						
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+        <div class="fila ">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+						
+							<div class="contenedor-fijo-dibujo">
+							</div>
+						
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+        <div class="fila">
+					<div class="dia-semana">
+						<p class="letras-dia"></p>
+						<p class="numero-dia"></p>
+					</div>
+					<div class="contenedor-info">
+							<div class="contenedor-fijo-dibujo">
+						</div>
+						<div class="contenedor-info-temperatura">
+							<p class="temperatura-real"><span class="simbolo-celsius">ºC</span></p>
+							<div class="valores-varios">
+								<img src="assets/img/max.svg" alt="" class="img-temp-max"><span class="temperatura-max bold"> Cº</span><br>
+								<img src="assets/img/min.svg" alt="" class="img-temp-min"><span class="temperatura-min bold"> Cº</span><br>
+								<img src="assets/img/precipitation.svg" alt="" class="img-precipitacion"> <span class="valor-precipitacion bold">%</span>
+						</div>
+						</div>
+					</div>
+				</div>
+      </div>
+    </div>
+		<footer>
+			<div class="footer">
+				<p>Datos recogidos de la API de el-tiempo.net</p>
+			</div>
+		</footer>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

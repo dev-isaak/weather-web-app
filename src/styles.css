@@ -1,0 +1,438 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0E2E3A #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0E2E3A;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+body{
+	background: #0E2E3A;
+	font-family: 'Krona One', sans-serif;
+	padding-top: 5rem;
+	width: 100%;
+	overflow-x: hidden;
+}
+/* Colores de tiras */
+.color-sol{
+	background: #E6DF95;
+	color: #0E2E3A;
+}
+.color-nubes{
+	background: #4DB0D3;
+	color: #E6DF95;
+}
+.color-nieve{
+	background: #BCE1EF;
+	color: #0E2E3A;
+}
+.color-lluvia{
+	background: #2B8BAD;
+	color: #E6DF95;
+}
+.color-tormenta{
+	background: #0E2E3A;
+	color: #E6DF95;
+}
+.navegador{
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 3px 3px 5px rgb(205, 205, 205);
+}
+.contenedor-derecha{
+	width: fit-content;
+	height: 100%;
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#contenedor-error{
+	width: fit-content;
+}
+.mensaje-error{
+	font-size: .7rem;
+	color: red;
+}
+#input-buscar{
+	height: 2rem;
+	width: 14rem;
+	font-size: .8rem;
+
+}
+.campo-busqueda{
+	cursor: pointer;
+	background-color: white;
+	border-bottom: 1px solid gray;
+	padding: .3rem;
+	transition: all 300ms;
+}
+.campo-busqueda:hover{
+	background-color:#BCE1EF ;
+}
+#resultado-busqueda{
+	background-color: white;
+	min-height: fit-content;
+	max-height: 15rem;
+	width: 14rem;
+	overflow: hidden;
+	position: fixed;
+	top: 3rem;
+	right: 7rem;
+	box-shadow: 4px 4px 10px gray;
+}
+.contenedor-general{
+	width: 95%;
+	height: 53rem;
+	background: #E9F5FA;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.contenedor-barras{
+	width: 80%;
+	height:fit-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.fila{
+	height: 27rem;
+	width: 5rem;
+	flex-grow: 1;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+}
+.fila-hoy{
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.dia-semana{
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.numero-dia{
+	font-size: 4rem;
+	color: #4DB0D3;
+}
+.letras-dia{
+	color: #4DB0D3;
+}
+
+.contenedor-info{
+	min-width: auto;
+	flex-grow: 8;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 11px 4px 34px rgba(32, 77, 92, 0.7);
+	border-radius: 3.125rem;
+	display: flex;
+	align-items: center;
+}
+
+.info-hoy{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.contenedor-fijo-dibujo{
+	margin-top: 1rem;
+}
+
+.contenedor-info-temperatura{
+	flex-grow: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.valores-varios{
+	font-size: .8rem;
+	margin-left: .6rem;
+}
+.temperatura-real{
+	font-size: 3rem;	
+}
+.simbolo-celsius{
+	font-size: 1.5rem;
+	top: 1rem;
+}
+.imagen-temperatura{
+	width: 3rem;
+	height: 7rem;
+	scale: 1.8;
+	display: flex;
+	margin-left: 2rem;
+}
+
+.img-temp-max,
+.img-temp-min,
+.img-viento,
+.img-precipitacion{
+	width: 1.5rem;
+	margin-right: .5rem;
+}
+.cnt-dibu-hoy{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cont-temp-hoy{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.valores-hoy{
+	flex-grow: 1;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.imagen-hoy{
+	width: 18rem;
+	scale: 2;
+}
+.temp-hoy{
+	font-size: 5rem;
+}
+.svg-imagen {
+	margin-left: 1rem;
+}
+
+.footer{
+	margin-top: 3rem;
+	width: 100%;
+	height: 3rem;
+	background:white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer p{
+	font-size: .8rem;
+}
+#input-buscar{
+	font-family: inherit;
+	padding: .5rem;	
+}
+#input-buscar:focus{
+	box-shadow: 2px 2px 4px gray inset;
+}
+#btn-buscar{
+	font-family: inherit;
+	border: none;
+	padding: .5rem;
+	border-radius: 1rem;
+	background: #0E2E3A;
+	color: #E6DF95;
+	transition: all 300ms;
+	cursor: pointer;
+}
+#btn-buscar:hover{
+	box-shadow: 2px 2px 4px gray;
+	color: #0E2E3A;
+	background: #E6DF95;
+}
+.pantalla-carga{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .9;
+	background-color: black;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loader {
+	position: fixed;
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+	z-index: 1000;
+}
+.none{
+	display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1350px) {
+	.navegador{
+		position: absolute;
+		width: 100%;
+		height: fit-content;
+		padding: 0;
+		padding-bottom: 1rem;
+		gap: 1rem;
+		display: flex;
+		flex-direction: column;
+	}
+	.navegador h1{
+		text-align: center;
+		margin-top: 1rem;
+		font-size: 1rem;
+	}
+	
+	.contenedor-general{
+		display: flex;
+		width: 100%;
+		height: fit-content;
+		justify-content: center;
+		padding: .5rem;
+		margin-top: 5rem;
+		padding-top: 4rem;
+	}
+	.contenedor-derecha{
+		width: 100%;
+		height: fit-content;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	.mensaje-error{
+		font-size: .6rem;
+	}
+	#input-buscar{
+		flex-grow: 1;
+	}
+	#btn-buscar{
+		flex-grow: 1;
+	}
+	#resultado-busqueda{
+		background-color: white;
+		min-height: fit-content;
+		max-height: 15rem;
+		width: 14rem;
+		overflow: hidden;
+		position: fixed;
+		top: 6.5rem;
+		left: 1.5rem;
+		box-shadow: 4px 4px 10px gray;
+	}
+	.contenedor-barras{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		min-height: fit-content;
+	}
+	.fila{
+		width: 100%;
+		height: 5rem;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+	.dia-semana{
+		flex-grow: 1;
+	}
+	.fila-hoy{
+		flex-grow: 3;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+	}
+	.info-hoy{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: fit-content;
+	}
+	.imagen-hoy{
+		width: 7rem;
+	}
+	.valores-hoy{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	
+	}
+	.cont-valores{
+		display: flex;
+		flex-direction: row;
+	}
+	.contenedor-info{
+		align-self: center;
+		width: fit-content;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;	
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+	.contenedor-info-temperatura{
+		display: flex;
+		flex-direction: row;
+		justify-content: right;
+		align-items: center;
+		padding-left: 2rem;
+	}
+	.temperatura-real,
+	.valores-varios{
+		text-align: right;
+		margin-right: 2rem;
+	}
+}
+@media (max-width: 515px) {
+	.contenedor-info-temperatura{
+		display: flex;
+		flex-direction: column;
+		justify-content: right;
+	}
+}
