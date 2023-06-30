@@ -1,2 +1,2 @@
 # weather-web-app
-An easy web to check the Spanish weather
+Page where you can check the weather in Spain through a search engine
